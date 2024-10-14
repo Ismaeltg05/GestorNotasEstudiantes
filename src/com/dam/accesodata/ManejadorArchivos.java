@@ -7,7 +7,6 @@ import java.util.List;
 public class ManejadorArchivos {
     private static final String ARCHIVO = "notas_estudiantes.txt";
 
-    // Método para añadir un estudiante al archivo
     public void añadirEstudiante(Estudiante estudiante) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(ARCHIVO, true))) {
             writer.write(estudiante.getNombre() + "," + estudiante.getNota());
@@ -18,7 +17,6 @@ public class ManejadorArchivos {
         }
     }
 
-    // Método para mostrar todos los estudiantes almacenados en el archivo
     public void mostrarEstudiantes() {
         List<Estudiante> estudiantes = leerEstudiantes();
         if (estudiantes.isEmpty()) {
@@ -30,7 +28,6 @@ public class ManejadorArchivos {
         }
     }
 
-    // Método para buscar un estudiante por su nombre
     public void buscarEstudiante(String nombre) {
         List<Estudiante> estudiantes = leerEstudiantes();
         boolean encontrado = false;
@@ -48,7 +45,6 @@ public class ManejadorArchivos {
         }
     }
 
-    // Método para calcular la nota media de todos los estudiantes
     public void calcularMedia() {
         List<Estudiante> estudiantes = leerEstudiantes();
         if (estudiantes.isEmpty()) {
@@ -65,7 +61,6 @@ public class ManejadorArchivos {
         System.out.printf("La nota media es: %.2f\n", media);
     }
 
-    // Método privado para leer todos los estudiantes del archivo
     private List<Estudiante> leerEstudiantes() {
         List<Estudiante> estudiantes = new ArrayList<>();
 

@@ -38,7 +38,6 @@ public class GestorNotas {
         scanner.close();  // Cierra el scanner al finalizar el programa
     }
 
-    // Método para mostrar el menú principal
     private static void mostrarMenu() {
         System.out.println("\n--- Gestor de Notas de Estudiantes ---");
         System.out.println("1. Añadir estudiante");
@@ -49,7 +48,6 @@ public class GestorNotas {
         System.out.print("Seleccione una opción: ");
     }
 
-    // Método para leer una opción válida del usuario
     private static int leerOpcion() {
         while (!scanner.hasNextInt()) {
             System.out.println("Por favor, ingrese un número válido.");
@@ -58,7 +56,6 @@ public class GestorNotas {
         return scanner.nextInt();
     }
 
-    // Método para añadir un nuevo estudiante
     private static void añadirEstudiante() {
         scanner.nextLine();  // Limpiar el buffer
         System.out.print("Ingrese el nombre del estudiante: ");
@@ -70,7 +67,6 @@ public class GestorNotas {
         manejador.añadirEstudiante(estudiante);
     }
 
-    // Método para validar la entrada de la nota del estudiante
     private static double leerNotaValida() {
         while (!scanner.hasNextDouble()) {
             System.out.println("Por favor, ingrese un valor numérico para la nota.");
@@ -79,13 +75,11 @@ public class GestorNotas {
         return scanner.nextDouble();
     }
 
-    // Método para mostrar todos los estudiantes
     private static void mostrarEstudiantes() {
         System.out.println("\n--- Lista de Estudiantes ---");
         manejador.mostrarEstudiantes();
     }
 
-    // Método para buscar un estudiante por nombre
     private static void buscarEstudiante() {
         scanner.nextLine();  // Limpiar el buffer
         System.out.print("Ingrese el nombre del estudiante a buscar: ");
@@ -93,7 +87,6 @@ public class GestorNotas {
         manejador.buscarEstudiante(nombre);
     }
 
-    // Método para calcular la nota media de todos los estudiantes
     private static void calcularMedia() {
         System.out.println("\n--- Nota Media de los Estudiantes ---");
         manejador.calcularMedia();
