@@ -1,0 +1,6 @@
+Ana,8.5
+Luis,7.0
+Carlos,9.2
+Pedro,10.0
+Adrian,7.0
+Carla,8.0
